@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJS</title>
+    <script crossorigin src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script> 
+
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        // React.createElement(type, props, children, n)
+        // React-DOM
+        const h1React = React.createElement('h1', {
+            title: 'Hello',
+            className: 'Heading'
+        }, 'Hello React!');
+        console.dir(h1React);
+
+        const ulReact = React.createElement(
+            'ul', 
+            {
+                id: 'ul-id',
+                style: 'color: red; font-size: 30px'
+            },
+            React.createElement('li', {id: 'li-1'}, 'JavaScript'),
+            React.createElement('li', null, 'ReactJS'),
+        );
+        console.dir(ulReact.props.children);
+
+    const postItem = React.createElement(
+        'div',
+        {
+            className:'post-item'
+        },
+        React.createElement('h2', 
+        {
+            title: 'Learning ReactJS'
+        }, 
+        'Learning ReactJS'),
+        React.createElement('p', {}, 'p')
+    )
+    console.dir(postItem);
+
+    // Get root element
+    const root = document.getElementById('root');
+
+    // React-DOM -> render UI
+    ReactDOM.render( postItem, root)
+    </script>
+</body>
+</html>
