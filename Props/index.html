@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJS</title>
+    <script crossorigin src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script> 
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        
+        function CourseItem(props) {
+            // console.log(props);
+            props.callback(Math.random());
+            return (
+                <div class="class-item">
+                    <img src={props.image} width='100' height='100' alt=""/>
+                    <h2>{props.title}</h2>
+                    <p>{props.description}</p>
+                </div>
+            )
+        }
+
+        // Destructuring: can set default value
+        function CourseItem2({image, title, description, callback}) {
+            // console.log(props);
+            return (
+                <div class="class-item">
+                    <img src={image} width='100' height='100' alt=""/>
+                    <h2>{title}</h2>
+                    <p>{description}</p>
+                </div>
+            )
+        }
+
+        function App() {
+            // console.log(<CourseItem title = 'C#' />)
+            return (
+                <div id="wrapper">
+                    <CourseItem2 
+                        image = "https://images.ctfassets.net/23aumh6u8s0i/1IKVNqiLhNURzZXp652sEu/4379cfba19f0e19873af6074d3017f70/csharp"
+                        title = "C#.NET"
+                        description = "C# .NET Framework"
+                        callback = {(random) => {
+                            console.log('random: ', random)
+                        }}
+                    />
+                </div>
+            )
+        }
+
+        ReactDOM.render(<App/>, document.getElementById('root'))
+    </script>
+</body>
+</html>
