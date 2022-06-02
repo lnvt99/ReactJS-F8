@@ -40,7 +40,9 @@
                 //         placeholder= "Enter name..."
                 //     />  
                 // </div>
-
+                
+                //  {data.map((item) => children(item))}: props in component
+                //  {(item) => <li key = {item}>{item}</li>}: children(item)
                 <div id="wrapper">
                     <List data = {cars}>
                         {(item) => <li key = {item}>{item}</li>}
