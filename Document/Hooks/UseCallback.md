@@ -1,0 +1,2 @@
+# useCallback
+- Giúp tránh tạo ra những hàm mới một cách không cần thiết trong function component
