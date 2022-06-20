@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+// Chapter 06: Hook
 // import App from './App';
 // import UseStateComponent from './Hook/useState/UseStateComponent';
 // import TwoWayBinding from './Hook/Two-wayBinding/TwoWayBinding';
@@ -15,13 +16,16 @@ import './index.css';
 // import UseReducer from './Hook/useReducer/TodoApp';
 // import UseContext from './Hook/useContext/UseContext';
 // import App from './Hook/Context+useReducer/App';
-import UseImperativeHandle from './Hook/useImperativeHandle/UseImperativeHandle';
+// import UseImperativeHandle from './Hook/useImperativeHandle/UseImperativeHandle';
+
+// Chapter 07: CSS
+import CSS from './CSS/CSS/App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-    <UseImperativeHandle />
+    <CSS />
   // </React.StrictMode>
 );
 
