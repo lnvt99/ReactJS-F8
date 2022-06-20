@@ -1,6 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import "./index.css";
 // Chapter 06: Hook
 // import App from './App';
 // import UseStateComponent from './Hook/useState/UseStateComponent';
@@ -19,13 +20,18 @@ import './index.css';
 // import UseImperativeHandle from './Hook/useImperativeHandle/UseImperativeHandle';
 
 // Chapter 07: CSS
-import CSS from './CSS/CSS/App';
-import reportWebVitals from './reportWebVitals';
+// import CSS from './CSS/CSS/App';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// Chapter 08: Router
+import Router from "./Router/App";
+import reportWebVitals from "./reportWebVitals";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <React.StrictMode>
-    <CSS />
+  <BrowserRouter>
+    <Router />
+  </BrowserRouter>
   // </React.StrictMode>
 );
 
